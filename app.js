@@ -37,6 +37,15 @@ Example: isAdult(21) should return 'Adult'.
 Complete the exercise in the space below:
 */
 
+const isAdult = (age) => {
+  if (age >= 18) {
+    return('Adult')
+  }
+  else {
+    return('Minor');
+  }
+
+}
 
 
 console.log('Exercise 2 Result:', isAdult(21));
@@ -62,6 +71,13 @@ Example: isCharAVowel('a') should return true.
 Complete the exercise in the space below:
 */
 
+const isCharAVowel = (string) => {
+if (string === 'a' || string === 'e' || string === 'i' || string === 'o' || string === 'u') {
+  return (true)
+} else {
+  return (false)
+}
+}
 
 
 console.log('Exercise 3 Result:', isCharAVowel("a"));
@@ -87,9 +103,11 @@ should return 'johnsmith@example.com'.
 Complete the exercise in the space below:
 */
 
+const generateEmail = (name, domain) => {
+return (`${name}@${domain}`);
+}
 
-
-console.log('Exercise 4 Result:', generateEmail("johnsmith", "example.com"));
+console.log('Exercise 4 Result:', generateEmail('finn' , 'gmail.com' ));
 
 
 
@@ -113,11 +131,13 @@ Complete the exercise in the space below:
 */
 
 
+const greetUser = (name , time) => {
+
+ return (`Good ${time} ${name}`)
+}
+
 
 console.log('Exercise 5 Result:', greetUser("Sam", "morning"));
-
-
-
 
 
 
@@ -136,6 +156,15 @@ Example: maxOfThree(17, 4, 9) should return 17.
 Complete the exercise in the space below:
 */
 
+const maxOfThree = (x , y , z) => {
+if (x > y && x > z) {
+  return x;}
+   else if  (y > x && y > z) {
+    return y; };
+     if  (z > y && z > x) {
+      return z};
+    }
+  
 
 
 console.log('Exercise 6 Result:', maxOfThree(5, 10, 8));
@@ -161,6 +190,9 @@ Example: calculateTip(50, 20) should return 10.
 Complete the exercise in the space below:
 */
 
+const calculateTip = (bill, tip) => {
+return ((tip/100) * bill)
+}
 
 
 console.log('Exercise 7 Result:', calculateTip(50, 20));
@@ -188,8 +220,18 @@ Example: convertTemperature(32, 'F') should return 0 (Celsius).
 Complete the exercise in the space below:
 */
 
+const convertTemperature = (temp , scale) => {
 
+let celToFar = (temp * 1.8) + 32;
+let farToCel = (temp -32) / 1.8;
 
+if (scale === 'C') {
+  return (`${celToFar}, F`);
+}
+else if (scale === 'F') {
+  return (`${farToCel}, C`);
+}
+}
 console.log('Exercise 8 Result:', convertTemperature(32, "C"));
 
 
@@ -217,10 +259,25 @@ Example: basicCalculator(10, 5, 'subtract') should return 5.
 Complete the exercise in the space below:
 */
 
+const basicCalculator = (numA, numB, method) => {
+  if (method === 'add') {
+    return numA + numB; 
+  }
+  else if (method === 'subtract') {
+    return numA - numB;
+  }
+  else if (method === 'multiply') {
+    return numA * numB;
+  }
+  else if (method === 'divide') {
+    return numA / numB;
+  }
+
+
+}
 
 
 console.log('Exercise 9 Result:', basicCalculator(10, 5, "subtract"));
-
 
 
 
@@ -246,8 +303,23 @@ Complete the exercise in the space below:
 */
 
 
+const calculateGrade = (grade) => {
+  if (grade >= 90 ) {
+    return 'A'
+}
+else if (grade <= 89 && grade >=80) {
+  return 'B'
+}
+else if (grade <= 79 && grade >=70) {
+  return 'C'
+}
+else if (grade <= 69 && grade >=60) {
+  return 'D'
+}
+else { return 'F'}
+}
 
-console.log('Exercise 10 Result:', calculateGrade(85));
+console.log('Exercise 10 Result:', calculateGrade(33));
 
 
 
@@ -275,6 +347,17 @@ Complete the exercise in the space below:
 */
 
 
+const createUsername = (firstName, secondName) => {
+
+  const first = firstName.substr(0,3);
+  const second = secondName.substr(0,3);
+  const numA = firstName.length;
+  const numB = secondName.length
+  const num = numA + numB
+
+  return (`${first}${second}${num}`)
+
+}
 
 console.log('Exercise 11 Result:', createUsername("Samantha", "Green"));
 
@@ -296,6 +379,10 @@ This function should return the count of arguments passed to it when called.
 Complete the exercise in the space below:
 */
 
+function numArgs(amount) {
 
+return arguments.length;
+
+}
 
 console.log('Exercise 12 Result:', numArgs(1, 2, 3, 4));
