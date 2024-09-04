@@ -270,6 +270,7 @@ const basicCalculator = (numA, numB, method) => {
   else if (method === 'divide') {
     return numA / numB;
   }
+  // Added error message as an experiment 
   else { 
     return "This isn't BODMAS you fool"
   }
