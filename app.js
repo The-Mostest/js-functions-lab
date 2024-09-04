@@ -72,7 +72,7 @@ Complete the exercise in the space below:
 */
 
 const isCharAVowel = (string) => {
-if (string === 'a' || string === 'e' || string === 'i' || string === 'o' || string === 'u') {
+if ([string === 'a' || string === 'e' || string === 'i' || string === 'o' || string === 'u']) {
   return (true)
 } else {
   return (false)
@@ -80,7 +80,7 @@ if (string === 'a' || string === 'e' || string === 'i' || string === 'o' || stri
 }
 
 
-console.log('Exercise 3 Result:', isCharAVowel("a"));
+console.log('Exercise 3 Result:', isCharAVowel("c"));
 
 
 
@@ -104,12 +104,10 @@ Complete the exercise in the space below:
 */
 
 const generateEmail = (name, domain) => {
-return (`${name}@${domain}`);
+return `${name}@${domain}`;
 }
 
-console.log('Exercise 4 Result:', generateEmail('finn' , 'gmail.com' ));
-
-
+console.log('Exercise 4 Result:', generateEmail('bob' , 'hotmail.com' ));
 
 
 
@@ -191,7 +189,7 @@ Complete the exercise in the space below:
 */
 
 const calculateTip = (bill, tip) => {
-return ((tip/100) * bill)
+return (tip/100) * bill
 }
 
 
@@ -271,6 +269,9 @@ const basicCalculator = (numA, numB, method) => {
   }
   else if (method === 'divide') {
     return numA / numB;
+  }
+  else { 
+    return "This isn't BODMAS you fool"
   }
 
 
